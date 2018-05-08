@@ -1,0 +1,47 @@
+<div class="main">
+  <table id="table" class="accounts-table">
+    <tr>
+      <th class="col-account-title" (click)="handleHeaderClick('accountNumber')"  [ngClass]="{'active-sort' : currentSortColumn === 'accountNumber'}">
+        Account <a *ngIf="currentSortColumn === 'accountNumber'" href="#">
+          <span *ngIf="currentSortDirection === 'asc'" class="top"></span>
+          <span *ngIf="!(currentSortDirection === 'asc')" class="bottom"></span>
+        </a>
+      </th>
+      <th class="col-cash-title" (click)="handleHeaderClick('availableCash')" [ngClass]="{'active-sort': currentSortColumn === 'availableCash'}">
+        <a *ngIf="currentSortColumn === 'availableCash'" href="#">
+          <span *ngIf="currentSortDirection === 'asc'" class="top"></span>
+          <span *ngIf="currentSortDirection === 'desc'" class="bottom"></span>
+        </a>
+        <h4 class="available-cash">Available Cash</h4>
+        <h4 class="todays-change">Today"s Change</h4>
+      </th>
+    </tr>
+    <tbody>
+      <tr *ngFor="let stockItem of stockListData" class="accounts-row">
+        <td class="row-account">
+          {{stockItem.accountType}} - {{stockItem.accountNumber}}
+        </td>
+        <td class="row-cash">
+          <p>
+            {{stockItem.availableCash | currency:'USD':'symbol-narrow'}}
+          </p>
+          <p [ngClass]="{'row-cash-negative':(stockItem.changeInPercent < 0),'row-cash-positive':(stockItem.changeInPercent > 0),
+          'row-cash-no-change':(stockItem.changeInPercent === 0)}">
+            {{stockItem.changeInPercent}}% / {{stockItem.changeInPrice | currency:'USD':'symbol-narrow'}}
+          </p>
+        </td>
+      </tr>
+    </tbody>
+    <tfoot *ngIf="!loadMoreRecords">
+      <tr>
+        <td colSpan="2" class="load-more">
+          <button type="button" (click)="loadMore()">
+            Load more
+          </button>
+        </td>
+        <td>
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+</div>

@@ -1,0 +1,51 @@
+{
+  "stockData": [{
+      "accountId": 1,
+      "accountType": "IRA",
+      "accountNumber": "5200",
+      "availableCash": 5763.36,
+      "changeInPercent": -0.08,
+      "changeInPrice": 8916.69
+    },
+    {
+      "accountId": 2,
+      "accountType": "AAA",
+      "accountNumber": "3810",
+      "availableCash": 10050054.07,
+      "changeInPercent": 0.07,
+      "changeInPrice": 8916.69
+    },
+    {
+      "accountId": 34,
+      "accountType": "REG",
+      "accountNumber": "2019",
+      "availableCash": 13465679.34,
+      "changeInPercent": 0.00,
+      "changeInPrice": 0.00
+    },
+    {
+      "accountId": 4,
+      "accountType": "AAA",
+      "accountNumber": "1812",
+      "availableCash": 2010926.1,
+      "changeInPercent": 0.21,
+      "changeInPrice": 38881.63
+    },
+    {
+      "accountId": 5,
+      "accountType": "IRA",
+      "accountNumber": "0146",
+      "availableCash": 15884302.39,
+      "changeInPercent": 0.03,
+      "changeInPrice": 7430.83
+    },
+    {
+      "accountId": 6,
+      "accountType": "AAA",
+      "accountNumber": "0029",
+      "availableCash": 39160334.42,
+      "changeInPercent": -0.07,
+      "changeInPrice": 31435.87
+    }
+  ]
+}

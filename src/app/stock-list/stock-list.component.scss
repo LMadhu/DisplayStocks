@@ -1,0 +1,249 @@
+html {
+  font-family: 'Arial';
+}
+
+.main {
+  background-color: #009CDE;
+  width: 320px;
+  height: 568px;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+
+.main table {
+  border-collapse: collapse;
+}
+
+.accounts-table {
+  background-color: #f6f6f6;
+  margin: 0 auto;
+  width: 97%;
+}
+
+.accounts-table th {
+  border-bottom: 1px solid #bdbdbd;
+  border-right: 1px solid #f6f6f6;
+}
+
+.accounts-table td {
+  border-bottom: 1px solid lightgrey;
+}
+
+.accounts-table .load-more {
+  text-align: center;
+  height: 54px;
+}
+
+.accounts-table .load-more button {
+  color: #009CDE;
+  font-size: 14px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 10px;
+  outline: none;
+}
+
+.row-account, .row-cash {
+  padding: 10px;
+}
+
+.row-account {
+  font-size: 16px;
+  color: #009CDE;
+  font-weight: 700;
+}
+
+.col-account-title, .col-cash-title {
+  white-space: nowrap;
+  font-weight: 300;
+  font-size: 12px;
+  padding: 5px;
+  width: 50%;
+  vertical-align: middle;
+  color: #3f3f3f;
+}
+
+.col-account-title {
+  text-align: left;
+  background-color: #f6f6f6;
+}
+
+.col-cash-title {
+  text-align: right;
+  background-color: #f6f6f6;
+}
+
+.active-sort {
+  background-color: #d7d7d7;
+}
+
+.col-cash-title h4 {
+  text-align: right;
+  margin:0;
+  font-size:100%;
+  line-height:1.2;
+  font-weight: 300;
+}
+
+.col-cash-title .todays-change {
+  color: #7e7e7e;
+  float: right;
+}
+
+.col-cash-title .available-cash {
+  display:inline-block;
+  float: right;
+}
+
+.row-account {
+  text-align: left;
+}
+
+.row-cash {
+  text-align: right;
+}
+
+.row-cash p {
+  margin:0;
+  font-size:100%;
+  line-height:1.2;
+  padding: 0;
+}
+
+.row-cash .row-cash-change {
+  font-size: 12px;
+}
+
+.row-cash .row-cash-negative {
+  color: red;
+}
+
+// .row-cash .row-cash-negative::before {
+//   content: '-';
+// }
+
+.row-cash .row-cash-positive {
+  color: green;
+}
+
+.row-cash .row-cash-positive::before {
+  content: '+';
+}
+.row-cash .row-cash-no-change {
+  color: grey;
+}
+
+.accounts-angle-arrow, .cash-angle-arrow {
+  color: #009CDE;
+  margin-left: 4px;
+  font-weight: bold;
+}
+
+.cash-angle-arrow {
+  margin-right: -60px;
+}
+
+a {
+  display: inline-block;
+  border-radius: 50%;
+}
+
+// a:hover .left, a:hover .top, a:hover .bottom, a:hover .right{
+//   border: 0.5em solid #e74c3c;
+// }
+
+// a:hover .left:after, a:hover .top:after, a:hover .bottom:after, a:hover .right:after {
+//   border-top: 0.5em solid #e74c3c;
+//   border-right: 0.5em solid #e74c3c;
+// }
+
+.left {
+  display: inline-block;
+  width: 4em;
+  height: 4em;
+  border: 0.5em solid #009CDE;
+  border-radius: 50%;
+  margin-right: 1.5em;
+}
+
+.left:after {
+  content: '';
+	display: inline-block;
+  margin-top: 1.05em;
+  margin-left: 0.6em;
+  width: 1.4em;
+  height: 1.4em;
+  border-top: 0.5em solid #009CDE;
+  border-right: 0.5em solid #009CDE;
+  -moz-transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+.top {
+  display: inline-block;
+  // width: 4em;
+  // height: 4em;
+  // border: 0.5em solid #009CDE;
+  border-radius: 50%;
+  margin-right: 0.75em;
+}
+
+.top:after {
+  content: '';
+	display: inline-block;
+  margin: 0.2em;
+  width: 0.5em;
+  height: 0.5em;
+  border-top: 0.2em solid #009CDE;
+  border-right: 0.2em solid #009CDE;
+  -moz-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.bottom {
+  display: inline-block;
+  // width: 4em;
+  // height: 4em;
+  // border: 0.5em solid #009CDE;
+  border-radius: 50%;
+  margin-left: 0.75em;
+}
+
+.bottom:after {
+  content: '';
+	display: inline-block;
+  margin: 0.2em;
+  width: 0.5em;
+  height: 0.5em;
+  border-top: 0.2em solid #009CDE;
+  border-right: 0.2em solid #009CDE;
+  -moz-transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+.right {
+  display: inline-block;
+  width: 4em;
+  height: 4em;
+  border: 0.5em solid #009CDE;
+  border-radius: 50%;
+  margin-left: 1.5em;
+}
+
+.right:after {
+  content: '';
+	display: inline-block;
+  margin-top: 1.05em;
+  margin-left: -0.6em;
+  width: 1.4em;
+  height: 1.4em;
+  border-top: 0.5em solid #009CDE;
+  border-right: 0.5em solid #009CDE;
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
